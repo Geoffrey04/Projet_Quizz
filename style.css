@@ -1,0 +1,109 @@
+h1 {
+    display: block;
+    height: 20vh;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    text-shadow: black 3px 3px 10px;
+}
+
+p {
+    text-shadow: white 3px 3px 10px;
+    color : black;
+
+}
+body {
+    background-image: url("https://wallpapersite.com/images/pages/pic_w/3852.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+#contenu {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Bitter', serif;
+    font-size: 2.6vh;
+
+}
+
+#issue {
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    color : white;
+
+    -webkit-box-shadow: 26px 22px 16px -1px rgba(0,0,0,0.84);
+    -moz-box-shadow: 26px 22px 16px -1px rgba(0,0,0,0.84);
+    box-shadow: 26px 22px 16px -1px rgba(0,0,0,0.84);
+}
+
+li {
+    margin-bottom: 2vh;
+    background-color: black;
+    color: white;
+    margin-right: 20%;
+    margin-left: 20%;
+    list-style-type: none;
+    border-radius: 10px;
+
+}
+
+#list_answer {
+    margin-top: 8vh;
+}
+
+#display_result {
+    display: none;
+    width: 100%;
+    height: 65vh;
+    padding: 2%;
+    border-radius: 5vw;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.87);
+    overflow: auto;
+    box-sizing: content-box;
+
+}
+
+#end {
+    text-align: center;
+    margin: auto;
+}
+
+#score {
+    color : red;
+    font-size: xx-large;
+}
+
+#wrong {
+    color: white;
+    position: relative;
+    height: auto;
+    padding: 0;
+
+}
+
+
+#reset {
+    display: none;
+    padding:6px 0 6px 0;
+    font:bold 13px Arial;
+    background: #b21f2d;
+    color: honeydew;
+    border-radius:2px;
+    width:100px;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 3px #999;
+    font-size: 2vh;
+}
+
+#questions {
+    color : black;
+    background-color: white;
+}
+
+
