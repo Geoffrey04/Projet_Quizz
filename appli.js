@@ -1,3 +1,4 @@
+// Array of questions and answers
 var tbl_questions = [
     {
         Question: "1.Au début de la série, qui est sur le trône de fer ?",
@@ -88,12 +89,17 @@ var tbl_questions = [
 
     },
 ];
-
+// array for function verif()
 tbl_correction = [];
 
 
+function display_gif() {
+    $('#gif').attr('src', 'https://media3.giphy.com/media/NyvaiYod2ShwI/giphy.gif?cid=3640f6095c0a2bf9516475796be73ec6')
+}
+
 var score = 0;
 
+//  function verif look if the choice of user it's good or not
 function verif() {
 
     if (tbl_correction[0] == 2) {
@@ -180,12 +186,12 @@ function verif() {
     $('#score').html('votre score est de' + ' ' + score + '/10');
 
 };
-
+// function for restart new game
 function reset() {
     location.reload();
 }
 
-
+// Display the first questions and answers
 let i;
 
 function Afficher() {
@@ -205,7 +211,7 @@ function Afficher() {
 
 Afficher();
 
-
+// event for select answer
 $('li').click(function () {
 
 
@@ -214,20 +220,25 @@ $('li').click(function () {
     tbl_correction.push(i2);
     console.log(tbl_correction);
 
+    // if i>= 9 , also the game it's finish
     if (i >= 9) {
+        // Screen of game it's no more visible
         $('#issue').css({
             'display': 'none'
         });
-
+        // Screen of result display
         $('#display_result').css({
             'display': 'inline-block'
         });
-
+        // Button for restart it's now visible
         $('#reset').css({
             'display': 'inline-block'
         });
+        // call function
         verif();
+        display_gif();
 
+        // Display questions one after one , when user click on answer
     } else {
         i++;
 
@@ -243,9 +254,6 @@ $('li').click(function () {
 });
 
 
-$('.ml2').each(function(){
-    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
 
 
 
