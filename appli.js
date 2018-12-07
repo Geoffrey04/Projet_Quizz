@@ -223,13 +223,10 @@ $('li').click(function () {
     // if i>= 9 , also the game it's finish
     if (i >= 9) {
         // Screen of game it's no more visible
-        $('#issue').css({
-            'display': 'none'
-        });
+        $('#issue').hide();
         // Screen of result display
-        $('#display_result').css({
-            'display': 'inline-block'
-        });
+        $('#display_result').hide();
+        $('#display_result').slideToggle(3000);
         // Button for restart it's now visible
         $('#reset').css({
             'display': 'inline-block'
@@ -242,7 +239,8 @@ $('li').click(function () {
     } else {
         i++;
 
-
+        $('#issue').hide();
+        $('#issue').show(1000);
         $('#questions').html(tbl_questions[i].Question);
         $('#Reponse_a').html(tbl_questions[i].Reponse1);
         $('#Reponse_b').html(tbl_questions[i].Reponse2);
